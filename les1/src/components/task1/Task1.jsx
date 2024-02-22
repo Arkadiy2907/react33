@@ -9,13 +9,11 @@ import { TaskStyled } from '../../assets/styles/Task.styles.js';
 class Task1 extends React.Component {
   render() {
     return (
-      <>
-        <TaskStyled>
-          <h2>Task 1</h2>
-          <ControlledState />
-          <NotControlledState />
-        </TaskStyled>
-      </>
+      <TaskStyled>
+        <h2>Task 1</h2>
+        <ControlledState />
+        <NotControlledState />
+      </TaskStyled>
     );
   }
 }
