@@ -14,7 +14,7 @@ class ControlledState extends React.Component {
     this.setState({ name: e.target.value });
   };
 
-  getName = (e) => {
+  getName = () => {
     this.setState({ _name: this.state.name });
     this.setState({ name: '' });
   };
