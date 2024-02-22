@@ -1,6 +1,6 @@
 const FunCompItem = ({ num, id, delNumber }) => {
   return (
-    <li className="postItem">
+    <li>
       <p>number: {num}</p>
       <button onClick={() => delNumber(id)}>X</button>
     </li>

@@ -14,7 +14,7 @@ export const TaskStyled = styled.div`
   align-items: flex-start;
   gap: 5px;
   padding: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   h2 {
     margin: 0;
@@ -29,10 +29,10 @@ export const MyInput = styled.div`
   overflow: hidden;
   width: 12rem;
   max-width: 12rem;
-  height: 7rem;
-  max-height: 7rem;
+  height: 8rem;
+  max-height: 8rem;
   border: 1px solid gray;
-  border-radius: 10px;
+  border-radius: 2px;
   padding: 5px;
   gap: 3px;
   overflow: hidden;
@@ -52,11 +52,14 @@ export const MyInput = styled.div`
 `;
 
 export const FunCompUl = styled.ul`
+  margin: 0;
   height: 15rem;
   max-height: 15rem;
-  overflow-y: auto;
-  width: 21rem;
+  overflow-y: scroll;
+  width: 15rem;
   padding: 0;
+  border: solid 1px grey;
+  border-radius: 2px;
 
   li {
     display: flex;
