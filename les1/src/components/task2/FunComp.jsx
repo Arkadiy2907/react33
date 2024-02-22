@@ -32,13 +32,26 @@ const FunComp = () => {
   // componentWillUnmount
   React.useEffect(() => {
     console.log(
-      'компонент был отображен как componentDidMount при монтировании'
+      'если numbers.length === 0 то при перерендере будет componentWillUnmount'
     );
     return () => {
       //тут анонимная ф-я которая запускается при удалении
-      console.log('componentWillUnmount');
+      if (numbers.length === 0) {
+        console.log('componentWillUnmount');
+      }
     };
-  }, []); //вторым аргументом передается пустой массив чтоб не зачем более не следить после монтирования
+  }, [numbers]);
+
+  //useLayoutEffect выполняется синхронно после того, как компонент отрендерился, но перед тем,
+  // как браузер отрисует изменения на экране.Это позволяет выполнять синхронные операции с DOM,
+  // такие как измерение размеров элементов или манипуляции с классами CSS,
+  // перед тем, как пользователь увидит изменения на экране
+
+  React.useLayoutEffect(() => {
+    console.log('useLayoutEffect');
+  }, []); //сработает 2!!!
+
+  console.log('обычный console.log()'); //сработает первым!!!
 
   return (
     <>
