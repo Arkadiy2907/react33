@@ -13,11 +13,9 @@ const ChooseSide = () => {
   };
 
   return (
-    <>
-      <Button onClick={changeTheme}>
-        <img src={theme === 'light' ? imgLight : imgDark} alt="theme" />
-      </Button>
-    </>
+    <Button onClick={changeTheme}>
+      <img src={theme === 'light' ? imgLight : imgDark} alt="theme" />
+    </Button>
   );
 };
 
