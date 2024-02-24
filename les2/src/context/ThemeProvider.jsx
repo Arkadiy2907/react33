@@ -10,11 +10,11 @@ export const ThemeProvider = ({ children }) => {
 
     if (appStyled) {
       if (theme === 'dark') {
-        appStyled.style.backgroundColor = 'black';
-        appStyled.style.color = 'white';
+        appStyled.style.backgroundColor = 'rgb(18, 0, 122)';
+        appStyled.style.color = 'rgb(185, 185, 185)';
       } else {
-        appStyled.style.backgroundColor = 'white';
-        appStyled.style.color = 'black';
+        appStyled.style.backgroundColor = 'rgb(201, 201, 201)';
+        appStyled.style.color = 'rgb(18, 0, 122)';
       }
     }
   }, [theme]);
