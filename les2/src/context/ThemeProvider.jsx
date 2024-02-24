@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useLocalStorage } from '../assets/hooks/useLocalStorage';
 
 export const ThemeContext = React.createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useLocalStorage('theme', 'light');
 
   useEffect(() => {
     const appStyled = document.querySelector('.AppStyled');
