@@ -6,12 +6,16 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.body.style.backgroundColor = 'black';
-      document.body.style.color = 'white';
-    } else {
-      document.body.style.backgroundColor = 'white';
-      document.body.style.color = 'black';
+    const appStyled = document.querySelector('.AppStyled');
+
+    if (appStyled) {
+      if (theme === 'dark') {
+        appStyled.style.backgroundColor = 'black';
+        appStyled.style.color = 'white';
+      } else {
+        appStyled.style.backgroundColor = 'white';
+        appStyled.style.color = 'black';
+      }
     }
   }, [theme]);
 

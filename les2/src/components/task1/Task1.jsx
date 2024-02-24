@@ -3,6 +3,7 @@
 
 import React from 'react';
 import MyForms from './MyForms.jsx';
+import ChooseSide from '../ChooseSide/ChooseSide.jsx';
 import { TaskStyled } from '../../assets/styles/Task.styles.js';
 
 class Task1 extends React.Component {
@@ -11,6 +12,7 @@ class Task1 extends React.Component {
       <TaskStyled>
         <h2>Task 1</h2>
         <MyForms />
+        <ChooseSide />
       </TaskStyled>
     );
   }

@@ -43,7 +43,6 @@ export const MyInput = styled.div`
     cursor: pointer;
   }
 
-  input,
   p {
     width: 96%;
     margin: 0;
@@ -71,5 +70,15 @@ export const FunCompUl = styled.ul`
       width: 3rem;
       cursor: pointer;
     }
+  }
+`;
+
+export const ButtonChooseSide = styled.button`
+  width: 3rem;
+  height: 2.5rem;
+  cursor: pointer;
+
+  img {
+    width: 2rem;
   }
 `;

@@ -1,9 +1,8 @@
 import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeProvider';
-
 import imgLight from '../../assets/pic/sun.png';
 import imgDark from '../../assets/pic/moon.png';
-import styled from '@emotion/styled';
+import { ButtonChooseSide } from '../../assets/styles/Task.styles';
 
 const ChooseSide = () => {
   const [theme, setTheme] = useContext(ThemeContext);
@@ -13,20 +12,10 @@ const ChooseSide = () => {
   };
 
   return (
-    <Button onClick={changeTheme}>
+    <ButtonChooseSide onClick={changeTheme}>
       <img src={theme === 'light' ? imgLight : imgDark} alt="theme" />
-    </Button>
+    </ButtonChooseSide>
   );
 };
 
 export default ChooseSide;
-
-const Button = styled.button`
-  width: 3rem;
-  height: 2.5rem;
-  cursor: pointer;
-
-  img {
-    width: 2rem;
-  }
-`;
