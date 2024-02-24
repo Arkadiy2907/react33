@@ -77,6 +77,7 @@ export const ButtonChooseSide = styled.button`
   width: 3rem;
   height: 2.5rem;
   cursor: pointer;
+  margin-left: 3.4rem;
 
   img {
     width: 2rem;
