@@ -3,7 +3,7 @@
 
 import React from 'react';
 import FunComp from './FunComp';
-import { TaskStyled } from '../../assets/styles/Task.styles.js';
+import { TaskStyled } from '../../assets/styles/Task.styles';
 
 const Task2 = () => {
   return (

@@ -1,13 +1,18 @@
 import Task1 from './components/task1/Task1';
-import { AppStyled } from '../src/assets/styles/Task.styles';
 import Task2 from './components/task2/Task2';
+import ChooseSide from './components/ChooseSide/ChooseSide';
+import { ThemeProvider } from '../src/context/ThemeProvider';
+import { AppStyled } from '../src/assets/styles/Task.styles';
 
 function App() {
   return (
-    <AppStyled>
-      <Task1 />
-      <Task2 />
-    </AppStyled>
+    <ThemeProvider>
+      <AppStyled>
+        <ChooseSide />
+        <Task1 />
+        <Task2 />
+      </AppStyled>
+    </ThemeProvider>
   );
 }
 
