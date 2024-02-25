@@ -27,10 +27,8 @@ export const MyInput = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   overflow: hidden;
-  width: 12rem;
-  max-width: 12rem;
-  height: 8rem;
-  max-height: 8rem;
+  width: max(12rem, 12rem);
+  height: max(8rem, 8rem);
   border: 1px solid gray;
   border-radius: 2px;
   padding: 5px;
@@ -52,8 +50,7 @@ export const MyInput = styled.div`
 
 export const FunCompUl = styled.ul`
   margin: 0;
-  height: 15rem;
-  max-height: 15rem;
+  height: max(15rem, 15rem);
   overflow-y: scroll;
   width: 15rem;
   padding: 0;

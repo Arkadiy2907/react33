@@ -15,7 +15,7 @@ class MyForms extends React.Component {
   handleName = (e) => {
     const name = e.target.value;
     this.setState({ name }, () => {
-      if (this.state.name.toLowerCase().includes('react')) {
+      if (this.state.name.toLowerCase().includes('реакт')) {
         this.setState({ dis: true });
       } else {
         this.setState({ dis: false });
