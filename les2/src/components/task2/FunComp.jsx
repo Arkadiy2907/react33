@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useDeferredValue } from 'react';
 import FunCompItem from './FunCompItem';
 import { FunCompUl } from '../../assets/styles/Task.styles.js';
 import * as helpFun from '../../assets/helpers/helpFun.js';
@@ -10,11 +10,13 @@ const FunComp = () => {
   const addNum = () => helpFun.handleAddNum(numbers, setNumbers);
   const delNum = (id) => helpFun.handleDelNum(numbers, setNumbers, id);
 
+  const deferredItems = useDeferredValue(numbers); //перевести при отображении во вторую очередь
+
   return (
     <>
       <FunCompUl>
-        {numbers &&
-          numbers.map((el) => (
+        {deferredItems &&
+          deferredItems.map((el) => (
             <FunCompItem
               key={getRandomNum()}
               id={el}
